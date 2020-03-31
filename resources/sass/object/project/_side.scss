@@ -1,0 +1,38 @@
+.p-side{
+  &__title{
+    text-align: center;
+    font-size: $font-size_xl;
+    margin-bottom: $space_xxl;
+  }
+  
+  &__navitem{
+    height: 70px;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: $space_5l;
+    background-color: #fff;
+    transition: .5s;
+    &:hover{
+      color: $font-color_default;
+      opacity: .7;
+      transition: .5s
+    }
+  }
+  &__navtitle{
+    display: flex;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    background-color: $base-color;
+    color: #fff;
+    padding: $space_m $space_xl $space_m $space_xl;
+    font-size: $font-size_xl;
+    font-weight: bold;
+  }
+  &__navtext{
+    display: flex;
+    align-items: center;
+    font-size: $font-size_l;
+    padding: $space_m;
+  }
+}
+

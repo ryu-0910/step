@@ -1,0 +1,89 @@
+.p-panel{
+  &__container{
+   display: flex;
+   flex-wrap: wrap;
+   @include mq(){
+     display: block;
+     margin-right: 0;
+   }
+  }
+  &__link{
+    color: $font-color_default;
+    &:hover{
+      color: $font-color_default;
+    }
+  }
+  &__group{
+    background-color: #fff;
+    margin-right: $space_xxl;
+    
+    margin-bottom: $space_5l;
+    width: calc(33.3% - #{$space_xxl});
+    box-sizing: border-box;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, .3);
+    transition: .5s;
+    &:hover{
+      opacity: .7;
+      transition: .5s;
+    }
+    
+    @include mq(md){
+      margin-left: $space_xxl;
+      width: calc(50% - #{$space_xxl}*2);
+    }
+    @include mq(sm){
+      width: 90%;
+      margin: $space_3l auto;
+    }
+  }
+  &__header{
+    font-weight: bold;
+    padding: 0 $space_l ;
+    font-size: $font-size_l;
+    height: 55px;
+    display: flex;
+    align-items: center;
+  }
+  &__category{
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: $category-color;
+    padding: $space_m;
+    @include mq(){
+      height: 40px;
+      line-height: 40px;
+      font-size: $font-size_l;
+    }
+  }
+  &__img{
+    display: block;
+    height: 200px;
+  }
+  &__body{
+    position: relative;
+    padding: $space_l;
+  }
+  &__progress{
+    height: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin-bottom: $space_m;
+    &--bar{
+      text-align: center;
+      height: 30px;
+      background-color: #5bc0de;
+      border-radius: 10px;
+    }
+    &--value{
+      font-size: $font-size_m;
+      box-sizing: border-box;
+      line-height: 30px;
+      padding: $space_s;
+      color: $font-color_default;
+    }
+  }
+}
+  

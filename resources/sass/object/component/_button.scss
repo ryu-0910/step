@@ -1,0 +1,95 @@
+//TODO　リファクタ必要
+.c-btn{
+  &__container--right{
+    display: flex;
+    justify-content: flex-end;
+    margin: $space_l;
+    @include mq(){
+      justify-content: center;
+      margin-top: $space_xl;
+      margin-bottom: $space_xl;
+       vertical-align: middle;
+    }
+  }
+  &__container--around{
+    display: flex;
+    justify-content: space-around;
+    margin: $space_l;
+    @include mq(){
+      display: block;
+      margin: 0;
+    }
+  }
+  
+  &__btn--default{
+    border-radius: 3px;
+    border: none;
+    width: 20%;
+    @include mq(){
+      width: 100%;
+    }
+    font-size: $font-size_m;
+    padding: $space_l;
+    background: $btn-color_default;
+    color: #fff;
+    transition: .5s;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, .2);
+    &:hover{
+      cursor: pointer;
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+      transition: .5s;
+    }
+  }
+  &__btn--success{
+    border-radius: 3px;
+    border: none;
+    width: 20%;
+    @include mq(){
+      width: 100%;
+      margin-bottom: $space_xl;
+    }
+    font-size: $font-size_m;
+    padding: $space_l;
+    background: $btn-color_success;
+    color: #fff;
+    transition: .5s;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, .2);
+    &:hover{
+      cursor: pointer;
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+      transition: .5s;
+    }
+  }
+  &__btn--delete{
+    border-radius: 3px;
+    background: $btn-color_delete;
+    padding: $space_m $space_l;
+    color: #fff;
+    position: absolute;
+    font-size: $font-size_m;
+    margin-right: $space_l;
+    margin-top: $space_xl;
+    top: 0;
+    right: 0;
+    transition: .5s;
+    &:hover{
+      transition: .5s;
+      cursor: pointer;
+    }
+  }
+  &__btn--done{
+    border-radius: 3px;
+    border: none;
+    width: 20%;
+    @include mq(){
+      width: 100%;
+      margin:0 auto;
+    }
+    font-size: $font-size_m;
+    padding: $space_l;
+    background: #a9a9a9;
+    color: #fff;
+  }
+}

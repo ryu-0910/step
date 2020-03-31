@@ -1,0 +1,30 @@
+.p-hero{
+  background-image: url('../img/hero.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  &__title{
+    color: #fff;
+    font-size: $font-size_3l;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(227, 123, 137, .5), 0 0 50px rgba(0, 0, 0, .9);
+    br{
+      display: none;
+    }
+    @include mq(){
+      span{
+        display: none;
+      }
+      br{
+        display: block;
+      }
+      text-align: center;
+      font-size: $font-size_xl;
+    }
+  }
+}

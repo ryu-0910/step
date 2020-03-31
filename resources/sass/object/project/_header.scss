@@ -1,0 +1,28 @@
+.p-header{
+  width: $site-width;
+  
+  @include mq(md){
+    width: 80%;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  @include mq(){
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-left: $space_l;
+  padding-right: $space_l;
+}.p-header__title{
+  font-size: $font-size_3l;
+  transition: .3s;
+  &:hover{
+    color:$base-color;
+    transition: .3s;
+  }
+}

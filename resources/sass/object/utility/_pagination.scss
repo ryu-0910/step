@@ -1,0 +1,21 @@
+.page-item {
+  padding: $space-m $space_l;
+  font-weight: bold;
+  font-size: $font-size_l;
+  &.active{
+    border-radius: 10px;
+    background: $base-color;
+    .page-link-item{
+      color: #fff
+    }
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-link-item {
+  outline: none;
+}

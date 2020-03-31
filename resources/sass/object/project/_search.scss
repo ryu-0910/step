@@ -1,0 +1,32 @@
+.p-search{
+  margin-bottom: $space-xl;
+  &__container{
+    margin-bottom: 60px;
+  }
+  &__title{
+    font-weight: bold;
+  }
+  &__input{
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    margin-left: $space-xl;
+    width: 50%;
+    @include mq(){
+      width: 45%;
+    }
+    padding: 6px;
+    font-size: $font-size-default;
+  }
+  &__select{
+    width: 15%;
+    @include mq(){
+      width: 35%
+    }
+    line-height: 30px;
+    font-size: $font-size-default;
+    padding-left: 6px;
+    border-radius: 3px;
+    border: solid 1px #ccc;
+    background: #fff;
+  }
+}

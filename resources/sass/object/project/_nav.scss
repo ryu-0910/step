@@ -1,0 +1,42 @@
+.p-navmenu{
+  display: flex;
+  justify-content: center;
+  @include mq(md){
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background: rgba($color: #333, $alpha: 0.9);
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    transition: .5s;
+    &.active {
+      transition: .5s;
+      transform: translateX(-100%);
+      z-index: 3;
+    }
+  }
+  &__item{
+    line-height: 70px;
+    border-left: 1px solid $color-gray;
+    &:last-child{
+      border-right: 1px solid $color-gray;
+    }
+  }
+  &__link{
+    font-weight: bold;
+    display: block;
+    padding-right: $space_l;
+    padding-left: $space_l;
+  } 
+  @include mq(md) {
+    font-size: $font-size_xl;
+    &__link {
+      color: #fff;
+      display: block;
+      padding: $space_l;
+      text-align: center;
+    }
+  }
+}

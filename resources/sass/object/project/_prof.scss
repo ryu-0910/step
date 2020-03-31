@@ -1,0 +1,49 @@
+.p-prof{
+  &__container{
+    margin-top: $space_3l;
+    @include mq(){
+      box-sizing: border-box;
+    }
+  }
+  &__title{
+    padding: $space_xl;
+    font-size: $font-size_xl;
+    @include mq(){
+      font-size: $font-size_l;
+    }
+  }
+  &__img{
+    display: block;
+    width: 25%;
+    height: 200px;
+    @include mq(md){
+      height: 150px;
+    }
+    @include mq(){
+      width: 80%;
+      margin: auto;
+    }
+  }
+  &__content{
+    font-size: $font-size_l;
+    padding: $space_xl;
+    width: 75%;
+    margin-left: $space_xl;
+    background-color: $color-gray;
+    white-space: pre-wrap;
+    @include mq(){
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      margin-top: $space_xl;
+    }
+  }
+  &__wrap{
+    padding: $space_xl;
+    background-color: #fff;
+    display: flex;
+    @include mq(){
+      display: block;
+    }
+  }
+}

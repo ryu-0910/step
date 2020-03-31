@@ -1,0 +1,121 @@
+.p-form{
+  box-sizing: border-box;
+  width: 80%;
+  background-color: #fff;
+  margin: 0 auto;
+  border:3px solid $form-color;
+  padding: $space_5l;
+  @include mq(md){
+    width: 90%;
+    padding: $space_4l;
+  }
+  @include mq(){
+    width: 100%;
+    padding: $space_xl;
+  }
+  &__container{
+    width: $site-width;
+    @include mq(md){
+      width: 100%;
+    }
+    margin: 0 auto;
+    padding-top: 80px;
+    margin-bottom: $space_3l;
+  }
+  &__title{
+    font-size: $font-size_xxl;
+    font-weight: bold;
+    margin-bottom: $space_3l;
+    text-align: center;
+    @include mq(){
+      font-size: $font-size_xl;
+    }
+  }
+  &__content{
+    width: 100%;
+    margin-bottom: $space_3l;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    @include mq(){
+      display: block;
+    }
+  }
+  &__counter{
+    text-align: end;
+  }
+  &__name{
+    width: 25%;
+    padding-right: $space_xl;
+    @include mq(){
+      width: 100%;
+      margin-bottom: $space_m;
+    }
+    font-weight: bold;
+    display: block;
+    font-size: $font-size_default;
+  }
+  &__input--text{
+    display: block;
+    height: 50px;
+    width: 75%;
+    @include mq(){
+      width: 100%;
+    }
+    padding: $space_l;
+    font-size: $font-size_default;
+    border: none;
+    background-color: $form-color;
+    box-sizing: border-box;
+  }
+  
+  &__errmsg{
+    margin-bottom: $space_m;
+    text-align: center;
+    color: $err-color;
+  }
+  &__textarea{
+    display: block;
+    width: 75%;
+    height: 200px;
+    padding: $space_l;
+    font-size: $font-size_default;
+    box-sizing: border-box;
+    margin-bottom: $space_xl;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: $form-color;
+    @include mq(){
+      width: 100%;
+    }
+  }
+  &__select{
+    display: block;
+    box-sizing: border-box;
+    background-color: $form-color;
+    width: 30%;
+    padding-left: $space_l;
+    margin-right: 44%;
+    @include mq(md){
+      margin-right: 39%;
+      width: 35%;
+    }
+    @include mq(){
+      width: 100%;
+    }
+    height: 50px;
+    border: none;
+    text-align: center;
+    font-size: $font-size_default;
+  }
+  &__checkbox{
+    margin-right: $space_l;
+  }
+  &__input--err{
+    border: 2px solid $err-color;
+  }
+}

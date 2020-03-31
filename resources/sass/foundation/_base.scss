@@ -1,0 +1,27 @@
+html,body{
+  font-size: $font-size_default;
+  width: 100%;
+  line-height: 1.6;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; // TODO:リファクタ必要（変数にする）
+  text-size-adjust: 100%;
+  letter-spacing: 0.1em;
+  background-color: #fbfbfb;
+  color: $font-color_default;
+}
+
+a{
+  color: $font-color_default;
+  text-decoration: none;
+  transition: .5s;
+}
+
+a:hover{
+  color: $base-color;
+  transition: .5s;
+}
+
+img{
+  vertical-align: bottom;
+  width:  100%;
+}
+

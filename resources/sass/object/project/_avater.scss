@@ -1,0 +1,27 @@
+.p-profile__avater{
+  position: relative;
+  display: block;
+  margin:  $space_xl auto;
+  background-color: $form-color;
+  height: 200px;
+  width: 300px;
+  text-align: center;
+  line-height: 200px;
+  box-sizing: border-box;
+  color: #ccc;
+  &--input{
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+  }
+  &--img{
+    position: absolute;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    height: 200px;
+  }
+}
