@@ -13,7 +13,7 @@ class ChallengesController extends Controller
     {
         Log::debug($request->all());
         $challenge = new Challenge;
-        Auth::user()->challenges->save($challenge->fill($request->all()));
+        Auth::user()->challenges()->save($challenge->fill($request->all()));
 
         return response()->json(['flg'=> true]);
     }
