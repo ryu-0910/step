@@ -2073,7 +2073,7 @@ __webpack_require__.r(__webpack_exports__);
 
         if (childsteps_num.indexOf(_this.childStepDetail.num + 1) >= 0) {
           //もし次のステップのnumが配列内にあったら
-          location.href = '/step/' + _this.parentStep.id + '/' + (_this.childStepDetail.id + 1);
+          location.href = '/step/' + _this.parentStep.id + '/' + (_this.childStepDetail.id + 10);
         } else {
           location.href = '/mypage';
         }

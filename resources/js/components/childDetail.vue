@@ -71,7 +71,7 @@ export default {
       axios.post('/clear', data, config).then(res => { 
         console.log(res);
         if(childsteps_num.indexOf(this.childStepDetail.num+1) >= 0){ //もし次のステップのnumが配列内にあったら
-          location.href = '/step/'+ this.parentStep.id + '/' + (this.childStepDetail.id + 9);
+          location.href = '/step/'+ this.parentStep.id + '/' + (this.childStepDetail.id + 10);
         }else{
           location.href = '/mypage';
         }
