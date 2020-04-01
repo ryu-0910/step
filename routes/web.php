@@ -30,7 +30,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/step/{id}/edit', 'StepsController@edit')->name('steps.edit');
     Route::post('/step/{id}', 'StepsController@update')->name('steps.update');
     // チャレンジ
-    Route::post('/challenge', 'challengesController@challenge');
+    Route::post('/challenge', 'ChallengesController@challenge');
     // クリア
     Route::post('/clear', 'ClearsController@clear');
     // マイページ
