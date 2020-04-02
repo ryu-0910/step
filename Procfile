@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 public/
+/Applications/MAMP/tmp/mysql/mysql.sock
