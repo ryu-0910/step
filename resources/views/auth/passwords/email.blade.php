@@ -5,7 +5,7 @@
 @section('content')
 <div class="u-bg--default">
       <div class="c-container">
-        <form method="post" action="{{ route('password.email') }}" class="p-form">
+        <form method="POST" action="{{ route('password.email') }}" class="p-form">
             @csrf
           <h2 class="p-form__title">パスワードリセット</h2>
 
