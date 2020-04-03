@@ -30,9 +30,14 @@
             <input name="password" type="password" class="p-form__input--text @error('password') p-form__input--err @enderror" required autocomplete="password" autofocus>
           </div>
 
+          <div class="p-form__content">
+            <span class="p-form__name">パスワード再入力</span>
+            <input name="password_confirmation" type="password" class="p-form__input--text" required autocomplete="new-password">
+          </div>
+
 
           <div class="c-btn__container--right">
-            <button type="submit" class="c-btn c-btn__btn--default">パスワードリセット</button>
+            <button type="submit" class="c-btn c-btn__btn--default">リセット</button>
           </div>
         </form>
       </div>
