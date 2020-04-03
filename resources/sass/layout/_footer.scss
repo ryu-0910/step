@@ -1,8 +1,16 @@
 #l-footer{
-  height: 80px;
+  display: flex;
+  height: 160px;
   background-color: #333;
-  color: #fff;
-  text-align: center;
-  line-height: 80px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: $font-size_l;
+  span{
+    color: #fff;
+  }
+  a{
+      color: #fff;
+  }
 }

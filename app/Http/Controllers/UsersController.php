@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\VarDumper\VarDumper;
+use Illuminate\Support\Facades\Storage;
 
 class UsersController extends Controller
 {
@@ -39,8 +40,9 @@ class UsersController extends Controller
                 'img' => 'image|max:500'
             ]);
             //　アップロード
-            $path = $request->img->store('public/img');
-            $img = basename($path);
+            $post = $request->img;
+            $path = Storage::disk('s3')->put('/', $post, 'public');
+            $img = $path;
 
             //　更新データに格納
             $userData += array('img' => $img);

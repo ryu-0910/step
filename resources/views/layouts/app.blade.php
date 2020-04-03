@@ -61,7 +61,8 @@
         </main>
     </div>
     <footer id="l-footer">
-    Copyright ©︎ R.S All Rights Reserved.
+      <span>Copyright ©︎ STEP All Rights Reserved.</span>
+      <span><a href="https://github.com/ryu-0910/step">GitHub</a></span>
   </footer>
 </body>
 </html>
