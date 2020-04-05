@@ -8,6 +8,7 @@ use App\Challenge;
 use App\Step;
 use App\ChildStep;
 use App\Clear;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -56,8 +57,9 @@ class StepsController extends Controller
                 'parent_img' => 'image|max:500'
             ]);
             //　アップロード
-            $path = $request->parent_img->store('public/img');
-            $img = basename($path);
+            $post = $request->parent_img;
+            $path = Storage::disk('s3')->put('myprefix', $post, 'public');
+            $img = Storage::disk('s3')->url($path);
 
             //　更新データに格納
             $stepsData += array('img' => $img);
@@ -140,8 +142,9 @@ class StepsController extends Controller
                 'parent_img' => 'image|max:500'
             ]);
             //　アップロード
-            $path = $request->parent_img->store('public/img');
-            $img = basename($path);
+            $post = $request->parent_img;
+            $path = Storage::disk('s3')->put('myprefix', $post, 'public');
+            $img = Storage::disk('s3')->url($path);
 
             //　更新データに格納
             $stepsData += array('img' => $img);  
@@ -187,7 +190,7 @@ class StepsController extends Controller
     public function parentDetail($id)
     {
         if(!ctype_digit($id)){
-            return redirect('/home')->with('flash_message', '無効な操作が行われました。');
+            return redirect('/mypage')->with('flash_message', '無効な操作が行われました。');
         }
         //GETパラメータから対象のレコードを取得
         $step = Step::find($id);
@@ -215,7 +218,7 @@ class StepsController extends Controller
     public function childDetail($parent_id, $child_id)
     {   
         if(!ctype_digit($parent_id) || !ctype_digit($child_id)){
-            return redirect('/home')->with('flash_message', '無効な操作が行われました。');
+            return redirect('/mypage')->with('flash_message', '無効な操作が行われました。');
         }
         $step = Step::find($parent_id);
         

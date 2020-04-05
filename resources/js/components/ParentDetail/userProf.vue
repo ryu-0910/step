@@ -12,7 +12,7 @@ export default {
   props:['userProf'],
   data: function(){
     return{
-      showImg: this.userProf.img ? '/storage/img/' + this.userProf.img : '/img/no-img.png'
+      showImg: this.userProf.img ? this.userProf.img : '/img/no-img.png'
     }
   }
 }

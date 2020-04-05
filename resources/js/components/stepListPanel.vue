@@ -20,7 +20,7 @@ export default {
   props:['parentSteps','categoryData'],
   data: function(){
     return{
-      showImg: this.parentSteps.img ? '/storage/img/' + this.parentSteps.img : '/img/no-img.png',
+      showImg: this.parentSteps.img ? this.parentSteps.img : '/img/no-img.png',
     }
   }
 }

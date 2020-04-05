@@ -21,7 +21,7 @@ export default {
   props:['registSteps'],
   data: function(){
     return{
-      showImg: this.registSteps.img ? '/storage/img/' + this.registSteps.img : '/img/no-img.png'
+      showImg: this.registSteps.img ? this.registSteps.img : '/img/no-img.png'
     }
   },
   methods:{

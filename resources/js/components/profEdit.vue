@@ -66,7 +66,7 @@ export default {
   props: ['user'],
   data: function(){
     return{
-      showImg: this.user.img ? '/storage/img/' + this.user.img : '/img/no-img.png',
+      showImg: this.user.img ?  this.user.img : '/img/no-img.png',
       name: this.user.name ? this.user.name : '',
       email: this.user.email ? this.user.email : '',
       img: this.user.img ? this.user.img : '',

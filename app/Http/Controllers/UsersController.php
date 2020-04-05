@@ -41,8 +41,8 @@ class UsersController extends Controller
             ]);
             //　アップロード
             $post = $request->img;
-            $path = Storage::disk('s3')->put('/', $post, 'public');
-            $img = $path;
+            $path = Storage::disk('s3')->put('myprefix', $post, 'public');
+            $img = Storage::disk('s3')->url($path);
 
             //　更新データに格納
             $userData += array('img' => $img);

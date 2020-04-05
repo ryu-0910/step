@@ -1978,7 +1978,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['userProf'],
   data: function data() {
     return {
-      showImg: this.userProf.img ? '/storage/img/' + this.userProf.img : '/img/no-img.png'
+      showImg: this.userProf.img ? this.userProf.img : '/img/no-img.png'
     };
   }
 });
@@ -2327,7 +2327,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['challengeSteps'],
   data: function data() {
     return {
-      showImg: this.challengeSteps.img ? '/storage/img/' + this.challengeSteps.img : '/img/no-img.png',
+      showImg: this.challengeSteps.img ? this.challengeSteps.img : '/img/no-img.png',
       child_sum: this.challengeSteps.child_steps.length
     };
   },
@@ -2438,7 +2438,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['registSteps'],
   data: function data() {
     return {
-      showImg: this.registSteps.img ? '/storage/img/' + this.registSteps.img : '/img/no-img.png'
+      showImg: this.registSteps.img ? this.registSteps.img : '/img/no-img.png'
     };
   },
   methods: {
@@ -2548,7 +2548,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      showImg: this.parentStep.img ? '/storage/img/' + this.parentStep.img : '/img/no-img.png'
+      showImg: this.parentStep.img ? this.parentStep.img : '/img/no-img.png'
     };
   },
   methods: {
@@ -2599,7 +2599,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['userProf'],
   data: function data() {
     return {
-      showImg: this.userProf.img ? '/storage/img/' + this.userProf.img : '/img/no-img.png'
+      showImg: this.userProf.img ? this.userProf.img : '/img/no-img.png'
     };
   }
 });
@@ -2682,7 +2682,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['user'],
   data: function data() {
     return {
-      showImg: this.user.img ? '/storage/img/' + this.user.img : '/img/no-img.png',
+      showImg: this.user.img ? this.user.img : '/img/no-img.png',
       name: this.user.name ? this.user.name : '',
       email: this.user.email ? this.user.email : '',
       img: this.user.img ? this.user.img : '',
@@ -2896,7 +2896,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['parentSteps', 'categoryData'],
   data: function data() {
     return {
-      showImg: this.parentSteps.img ? '/storage/img/' + this.parentSteps.img : '/img/no-img.png'
+      showImg: this.parentSteps.img ? this.parentSteps.img : '/img/no-img.png'
     };
   }
 });
@@ -3021,7 +3021,7 @@ __webpack_require__.r(__webpack_exports__);
     // 親ステップデータ
     if (this.editFlg) {
       this.parent.img = this.parentStepData[0].img ? this.parentStepData[0].img : '';
-      this.parent.showImg = this.parentStepData[0].img ? '/storage/img/' + this.parentStepData[0].img : '';
+      this.parent.showImg = this.parentStepData[0].img ? this.parentStepData[0].img : '';
       this.parent.title = this.parentStepData[0].title ? this.parentStepData[0].title : '';
       this.parent.category_id = this.parentStepData[0].category_id ? this.parentStepData[0].category_id : '';
       this.parent.content = this.parentStepData[0].content ? this.parentStepData[0].content : '';

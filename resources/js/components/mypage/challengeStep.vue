@@ -25,7 +25,7 @@ export default {
   props:['challengeSteps'],
   data: function(){
     return{
-      showImg: this.challengeSteps.img ? '/storage/img/' + this.challengeSteps.img : '/img/no-img.png',
+      showImg: this.challengeSteps.img ?  this.challengeSteps.img : '/img/no-img.png',
       child_sum: this.challengeSteps.child_steps.length,
     }
   },

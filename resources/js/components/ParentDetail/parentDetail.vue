@@ -51,7 +51,7 @@ export default {
   },
   data: function(){
     return{
-      showImg: this.parentStep.img ? '/storage/img/' + this.parentStep.img : '/img/no-img.png'
+      showImg: this.parentStep.img ? this.parentStep.img : '/img/no-img.png'
     }
   },
   methods: {

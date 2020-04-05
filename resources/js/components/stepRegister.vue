@@ -105,7 +105,7 @@ export default {
     // 親ステップデータ
     if(this.editFlg){
       this.parent.img = this.parentStepData[0].img ? this.parentStepData[0].img : '';
-      this.parent.showImg = this.parentStepData[0].img ? '/storage/img/' + this.parentStepData[0].img : '';
+      this.parent.showImg = this.parentStepData[0].img ? this.parentStepData[0].img : '';
       this.parent.title = this.parentStepData[0].title ? this.parentStepData[0].title : '';
       this.parent.category_id = this.parentStepData[0].category_id ? this.parentStepData[0].category_id : '';
       this.parent.content = this.parentStepData[0].content ? this.parentStepData[0].content :  '';
